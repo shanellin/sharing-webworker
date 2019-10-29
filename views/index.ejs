@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" property="set:viewport" content="width=400, shrink-to-fit=no, user-scalable=0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://pbs.twimg.com/profile_images/417078109075034112/iruTC031_400x400.png">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <% if (pageData.hasCSS) { %>
+  <link rel="stylesheet" href="/styles/<%- pageData.CssRoute %>.css" />
+  <% } %>
+  <% if (pageData.hasJS) { %>
+  <script src="/scripts/<%- pageData.JsRoute %>.js"></script>
+  <% } %>
+  <script src="/scripts/race-worker.js"></script>
+  <script src="/scripts/main-worker.js"></script>
+  <title><%- pageData.pageTitle %></title>
+</head>
+
+<body>
+  <div>
+    <a href="/">/main</a>
+    <a href="/race">/race</a>
+  </div>
+  <h1><%- pageData.pageTitle %></h1>
+  <h3>Welcome to <%- pageData.pageDescribt %></h3>
+  <% if (pageData.pageTitle == 'WebWorker') { %>
+  <div id="result">
+    <button id="start">start</button>
+    <button id="close1">close worker</button>
+  </div>
+  <% } else { %>
+  <div id="result">
+    <button id="Without_worker">Without worker</button>
+    <button id="With_worker">With worker</button>
+    <button id="reset_game">Reset Game</button>
+    <button id="close2">close worker</button>
+    <div id="winner"></div>
+    <div class="race-box">
+      <div class="turtle-box">
+        <img id="turtle" src="/images/turtle.png">
+      </div>
+      <div class="rabbit-box">
+        <img id="rabbit" src="/images/rabbit.png">
+      </div>
+    </div>
+  </div>
+  <% } %>
+</body>
+
+</html>
