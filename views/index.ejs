@@ -27,7 +27,7 @@
   </div>
   <h1><%- pageData.pageTitle %></h1>
   <h3>Welcome to <%- pageData.pageDescribt %></h3>
-  <% if (pageData.pageTitle == 'WebWorker') { %>
+  <% if (pageData.pageTitle.includes('WebWorker')) { %>
   <div id="result">
     <button id="start">start</button>
     <button id="close1">close worker</button>

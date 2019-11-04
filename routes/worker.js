@@ -5,7 +5,7 @@ exports.root = (req, res) => {
 exports.index = (req, res) => {
   res.render("index", {
     pageData: {
-      pageTitle: "WebWorker",
+      pageTitle: "範例1：WebWorker",
       pageDescribt: 'WebWorker',
       hasJS: true,
       hasCSS: true,
@@ -17,7 +17,7 @@ exports.index = (req, res) => {
 exports.turtleRabbit = (req, res) => {
   res.render("index", {
     pageData: {
-      pageTitle: "Turtle & Rabbit",
+      pageTitle: "範例2：Turtle & Rabbit",
       pageDescribt: 'animal race',
       hasJS: true,
       hasCSS: true,
